@@ -57,9 +57,11 @@ pipeline {
             }
         }
     }
-            post {
-        always {
-            mail to: abhip@zignuts.com, subject: 'The Pipeline succeed  :)'
-        }
+    post {
+         always {
+                mail(to: "abhip@zignuts.com",
+                        subject: "That build passed.",
+                        body: "Nothing to see here")        
+         }
     }
 }
