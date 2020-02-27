@@ -60,6 +60,7 @@ pipeline {
     post {
         always {
             echo 'This will always run'
+            mail to: abhip@zignuts.com, subject: 'The Pipeline succed :)'
         }
         success {
             echo 'This will run only if successful'
