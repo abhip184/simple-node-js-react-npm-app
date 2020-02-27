@@ -57,5 +57,9 @@ pipeline {
             }
         }
     }
-        
+            post {
+        always {
+            mail to: abhip@zignuts.com, subject: 'The Pipeline succeed  :)'
+        }
+    }
 }
